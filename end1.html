@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		div{
+			border-radius: 30px;
+		}
+		.none {
+			background-color: white;
+			height: 20px;
+		}
+		.drop {
+  background-color:maroon;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display:block;
+  width: 220px;
+}
+		.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .drop {background-color}
+	</style>
+</head>
+<body><table>
+	<tr><th class="none"></th></tr>
+	<tr bgcolor="maroon">
+		<th>
+        <div class="dropdown" align="center">
+    		<button class="drop">ALL COURSES</button>
+    		<div class="dropdown-content">
+    			<a href="web.html" target="end">WEB COURSE</a>
+    			<a href="vid.html" target="end">VIDEO COURSE</a>
+    		</div>
+    	</div>
+    </th>
+</tr>
+<tr><th class="none"></th></tr>
+<tr bgcolor="maroon">
+		<th>
+        <div class="dropdown" align="center">
+    		<button class="drop">List By Discipline</button>
+    		<div class="dropdown-content">
+    			<a href="aer.html" target="end">Aerospace Engineering</a>
+    			<a href="arc.html" target="end">Architecture</a>
+    			<a href="bio.html" target="end">Biotechnology</a>
+    			<a href="che.html" target="end">Chemical Engineering</a>
+    			<a href="civ.html" target="end">Civil Engineering</a>
+    			<a href="com.html" target="end">Computer Science and Engineering</a>
+    			<a href="eee.html" target="end">Electrical Engineering</a>
+    			<a href="ele.html" target="end">Electronics & comunication Engineering</a>
+    			<a href="mec.html" target="end">Mechanical Engineering</a>
+    		</div>
+    	</div>
+    </th>
+</tr>
+<tr><th class="none"></th></tr>
+<tr bgcolor="maroon">
+		<th>
+        <div class="dropdown" align="center">
+    		<button class="drop">List By Institutions</button>
+    		<div class="dropdown-content">
+    			<a href="ban.html" target="end">IISc Bangalore</a>
+    			<a href="bom.html" target="end">IIT Bombay</a>
+    			<a href="del.html" target="end">IIT Delhi</a>
+    			<a href="guw.html" target="end">IIT Guwahati</a>
+    			<a href="kan.html" target="end">IIT Kanpur</a>
+    			<a href="khar.html" target="end">IIT Kharagpur</a>
+    			<a href="mad.html" target="end">IIT Madras</a>
+    			<a href="roor.html" target="end">IIT Roorkee</a>
+    		</div>
+    	</div>
+    </th>
+</tr>
+</table>
+</body>
+</html>
