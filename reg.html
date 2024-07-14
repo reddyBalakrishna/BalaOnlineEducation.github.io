@@ -1,0 +1,142 @@
+<html>
+<head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+            .sig{
+                  color: white;
+                  background-color:orange;
+                  font-size: 20px;
+                  display:inline-block;
+                  padding: 5px 5px;
+                  text-decoration:none;
+            }
+            div{
+                  border-radius: 80px;
+                  background-color:rgb(0,0,0,0.3);
+                  margin-top:30px;
+                  margin-right: 400px;
+                  margin-left: 380px;
+                  width: 450px;
+                  height: 600px;
+            }
+            div:hover{
+                  background-color: rgb(0,0,0,0.6);
+            }
+            body{
+                  background-image: url(log5.jpg);
+                  background-repeat: no-repeat;
+                  background-size: cover;
+            }
+            .icon{
+                  padding: 10px;
+                  background-color:orange;
+                  min-width: 30px;
+                  text-align: center;
+            }
+            .input1{
+                  display: -ms- flexbox;
+                  display: flex;
+                  width: 330px;
+                  margin: 15px;
+            }
+            .input{
+                  width: 310px;
+                  padding: 10px;
+                  outline: none;
+            }
+            .input:focus{
+                  border: 2px solid;
+            }
+            .but{
+                  background-color: orange;
+                  color: white;
+                  padding: 12px 10px;
+                  width: 335px;
+                  cursor: pointer;
+                  text-align: center;
+            }
+            .bt{
+                  padding: 8px 20px;
+                  background-color: orange;
+            }
+            a{
+                  color: white;
+                  text-decoration: none;
+                  font-size: 25px;
+            }
+      </style>
+<script>
+function valid()
+            {
+                  var userv=f.user.value;
+                  var pwdv=f.pwd.value;
+                  var emailv=f.mail.value;
+                  var phv=f.ph.value;
+                  var cnfv=f.cpwd.value;
+                  var userreg=new RegExp("[a-zA-Z][a-zA-Z0-9]*$");
+                  var emailreg=new RegExp("[a-zA-Z]+[0-9]+@gmail.com");
+                  var phreg=new RegExp("[0-9]{10}$");
+                  var ruser=userreg.test(userv);
+                  var remail=emailreg.test(emailv);
+                  var rph=phreg.test(phv);
+                  if(ruser && remail && rph && (pwdv.length >= 6) && (userv.length >= 6) && (cnfv==pwdv))
+                  {
+                        return true;
+                  }
+                  else
+                  {
+                        if(!ruser || userv.length<6)
+                        { 
+                             alert("invalid username");
+                        }
+                        if(pwdv.length < 6)
+                        { 
+                              alert("invalid password");
+                        }
+                        if (cnfv!=pwdv)
+                        { 
+                              alert("password doesn't match");
+                        }
+                        if(!remail)
+                        {
+                             alert(" invalid email");
+                        }
+                        if(!rph)
+                        { 
+                            alert("invalid phonenumber");
+                        }  
+                        return false;
+                  }
+            }
+</script>
+</head>
+<body>
+<form action="success1.html" name="f" onsubmit="return valid()">
+      <div>
+<table width="310" align="center">
+      <tr><th align="center"><h3><i class="fa fa-user-circle" style='font-size: 120px;color:orange'></i></h3></th></tr>
+<tr>
+<th class="input1"><i class="fa fa-user icon"></i><input class="input" type="text" name="user" placeholder="Username or email" align="center" required></th>
+</tr>
+<tr>
+<th class="input1"><i class="fa fa-key icon"></i><input class="input" type="password" name="pwd" placeholder="Password" align="center" required></th>
+</tr>
+<tr>
+<th class="input1"><i class="fa fa-key icon"></i><input class="input" type="password" name="cpwd" placeholder="Confirm Password" align="center" required></th>
+</tr>
+<tr>
+<th class="input1"><i class="fa fa-envelope icon"></i><input class="input" type="email" name="mail" placeholder="Email" align="center" required></th>
+</tr>
+<tr>
+<th class="input1"><i class="fa fa-phone-square icon"></i><input class="input" type="Phonenumber" name="ph" placeholder="Phonenumber" align="center" required></th>
+</tr>
+       <tr>
+      <th align="center" width="180"><button class="but" type="submit" name="submit" value="Sign-in"><font size="4">Register</font></button></th></tr>
+</table>
+</div>
+</form>
+</body>
+</html>
+
+
+
